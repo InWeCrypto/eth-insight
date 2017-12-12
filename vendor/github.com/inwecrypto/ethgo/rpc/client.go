@@ -1,4 +1,4 @@
-package client
+package rpc
 
 import (
 	"bytes"
@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/goany/slf4go"
+	"github.com/dynamicgo/slf4go"
 	"github.com/ybbus/jsonrpc"
 )
 
@@ -77,11 +77,11 @@ func (client *Client) GetBalance(address string) (value *big.Int, err error) {
 }
 
 // BlockNumber get geth last block number
-func (client *Client) BlockNumber() (uint, error) {
+func (client *Client) BlockNumber() (uint64, error) {
 
 	var data string
 
-	err := client.call("eth_blockNumber", &data, "latest")
+	err := client.call("eth_blockNumber", &data)
 
 	if err != nil {
 		return 0, err
@@ -93,7 +93,7 @@ func (client *Client) BlockNumber() (uint, error) {
 		return 0, err
 	}
 
-	return uint(val.Uint64()), nil
+	return val.Uint64(), nil
 }
 
 // BlockPerSecond get geth last block number
@@ -104,10 +104,26 @@ func (client *Client) BlockPerSecond() (val float64, err error) {
 	return
 }
 
+// Call eth call
+func (client *Client) Call(callsite *CallSite) (val float64, err error) {
+
+	err = client.call("eth_call", callsite, "latest", &val)
+
+	return
+}
+
 // GetBlockByNumber get geth last block number
-func (client *Client) GetBlockByNumber(number uint) (val interface{}, err error) {
+func (client *Client) GetBlockByNumber(number uint64) (val *Block, err error) {
 
 	err = client.call("eth_getBlockByNumber", &val, fmt.Sprintf("0x%x", number), true)
+
+	return
+}
+
+// GetTransactionByHash get geth last block number
+func (client *Client) GetTransactionByHash(tx string) (val *Transaction, err error) {
+
+	err = client.call("eth_getTransactionByHash", &val, tx)
 
 	return
 }

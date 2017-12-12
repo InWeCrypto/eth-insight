@@ -6,19 +6,19 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/dynamicgo/config"
-	"github.com/inwecrypto/eth-insight/client"
+	"github.com/inwecrypto/ethgo/rpc"
 )
 
 // BlockTimeEstimator .
 type BlockTimeEstimator struct {
 	blkPerSecond atomic.Value
-	c            *client.Client
+	c            *rpc.Client
 }
 
 func newBlockTimeEstimator(conf *config.Config) *BlockTimeEstimator {
 
 	est := &BlockTimeEstimator{}
-	est.c = client.NewClient(conf.GetString("insight.geth", "http://localhost:8545"))
+	est.c = rpc.NewClient(conf.GetString("insight.geth", "http://localhost:8545"))
 
 	est.blkPerSecond.Store(float64(0.1))
 
@@ -34,7 +34,7 @@ func (est *BlockTimeEstimator) getBPS() float64 {
 func (est *BlockTimeEstimator) estimateTask() {
 	ticker := time.NewTicker(time.Second * 10)
 	var lastMesaure time.Time
-	var lastblkID uint
+	var lastblkID uint64
 
 	for {
 		if blkID, err := est.c.BlockNumber(); err == nil {

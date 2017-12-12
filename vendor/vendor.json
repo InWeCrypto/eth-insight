@@ -1,6 +1,96 @@
 {
 	"comment": "",
 	"ignore": "test",
-	"package": [],
+	"package": [
+		{
+			"checksumSHA1": "8G3MdcWpgaVSwl1Yh/n6yJo3w5o=",
+			"origin": "github.com/dynamicgo/aliyunlog/vendor/github.com/Jeffail/gabs",
+			"path": "github.com/Jeffail/gabs",
+			"revision": "9bd9978d6a358bd15d6279dca10db76ea97af82a",
+			"revisionTime": "2017-12-12T03:51:19Z"
+		},
+		{
+			"checksumSHA1": "9X1/hLR+WoHu3Vg6SDKF6W6Rjm4=",
+			"path": "github.com/Sirupsen/logrus",
+			"revision": "7dd06bf38e1e13df288d471a57d5adbac106be9e",
+			"revisionTime": "2017-06-30T00:54:20Z"
+		},
+		{
+			"checksumSHA1": "PF/IhtoBfLFTPaKnZZ77VT5mReo=",
+			"origin": "github.com/dynamicgo/aliyunlog/vendor/github.com/aliyun/aliyun-log-go-sdk",
+			"path": "github.com/aliyun/aliyun-log-go-sdk",
+			"revision": "9bd9978d6a358bd15d6279dca10db76ea97af82a",
+			"revisionTime": "2017-12-12T03:51:19Z"
+		},
+		{
+			"checksumSHA1": "8dMf/LWTKUevSFeTpcs/Bq6ePcs=",
+			"path": "github.com/cloudflare/golz4",
+			"revision": "ef862a3cdc58a6f1fee4e3af3d44fbe279194cde",
+			"revisionTime": "2015-02-17T21:48:14Z",
+			"tree": true
+		},
+		{
+			"checksumSHA1": "EyA/iIbpVa67zc1XpNQH9fH0GUk=",
+			"path": "github.com/dynamicgo/aliyunlog",
+			"revision": "9bd9978d6a358bd15d6279dca10db76ea97af82a",
+			"revisionTime": "2017-12-12T03:51:19Z"
+		},
+		{
+			"checksumSHA1": "FbcM2THHHwG+T4WbruyMPUdB1X8=",
+			"path": "github.com/dynamicgo/config",
+			"revision": "aa9e325b771ca815461890c5e5b9be4e42da1633",
+			"revisionTime": "2017-11-26T15:05:34Z"
+		},
+		{
+			"checksumSHA1": "XmnYB5Ngjy4J0W+GpnpeKfYSGjs=",
+			"path": "github.com/dynamicgo/slf4go",
+			"revision": "baff4259548c37384c203a03ee15ea2bdae006d4",
+			"revisionTime": "2017-11-14T09:20:35Z"
+		},
+		{
+			"checksumSHA1": "wn2shNJMwRZpvuvkf1s7h0wvqHI=",
+			"origin": "github.com/dynamicgo/aliyunlog/vendor/github.com/gogo/protobuf/proto",
+			"path": "github.com/gogo/protobuf/proto",
+			"revision": "9bd9978d6a358bd15d6279dca10db76ea97af82a",
+			"revisionTime": "2017-12-12T03:51:19Z"
+		},
+		{
+			"checksumSHA1": "HmbftipkadrLlCfzzVQ+iFHbl6g=",
+			"origin": "github.com/dynamicgo/aliyunlog/vendor/github.com/golang/glog",
+			"path": "github.com/golang/glog",
+			"revision": "9bd9978d6a358bd15d6279dca10db76ea97af82a",
+			"revisionTime": "2017-12-12T03:51:19Z"
+		},
+		{
+			"checksumSHA1": "ElWI6EokQ8b0tO8g56Embm9p0cI=",
+			"path": "github.com/inwecrypto/ethgo/rpc",
+			"revision": "8057c03d5ff07ce98a206bf32f6aa9f15abeec3d",
+			"revisionTime": "2017-12-12T08:20:54Z"
+		},
+		{
+			"checksumSHA1": "rylbYOEA1HI2BfUOOz0QRmCf5ks=",
+			"path": "github.com/julienschmidt/httprouter",
+			"revision": "e1b9828bc9e5904baec057a154c09ca40fe7fae0",
+			"revisionTime": "2017-10-27T13:37:09Z"
+		},
+		{
+			"checksumSHA1": "3HVfwgLpCDH8JX211UWdrSi/GU4=",
+			"path": "github.com/lib/pq",
+			"revision": "b609790bd85edf8e9ab7e0f8912750a786177bcf",
+			"revisionTime": "2017-10-22T19:20:43Z"
+		},
+		{
+			"checksumSHA1": "ATnwV0POluBNQEMjPdylodz0oK0=",
+			"path": "github.com/lib/pq/oid",
+			"revision": "b609790bd85edf8e9ab7e0f8912750a786177bcf",
+			"revisionTime": "2017-10-22T19:20:43Z"
+		},
+		{
+			"checksumSHA1": "O2mPWSvnqyuWJess+RbpirQv44E=",
+			"path": "github.com/ybbus/jsonrpc",
+			"revision": "160c2ef8d9ec3b2d05dd534e08dceada46dfb763",
+			"revisionTime": "2017-08-04T07:25:02Z"
+		}
+	],
 	"rootPath": "github.com/inwecrypto/eth-insight"
 }
